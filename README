@@ -1,4 +1,12 @@
 Symmetric positive definite (SPD) matrices:
+- Poisson4k
+  size: 3,922 x 3,922, nnz: 26,942, density: 1.75 x 10^{-3}
+  smallest eigval: 4.87 x 10^{-3}, largest eigval: 7.80 x 10^{2}
+  spectral condition number: 1.60 x 10^{4}
+  description: stiffness matrix of a P1 finite element unstructured 
+  discretization of 2D Poisson PDE with random variable coefficient 
+  sampled as a Gaussian process with unit-variance squared exponential 
+  covariance.
 - tri100eigs4k
   size: 4,000 x 4,000, nnz: 11,998, density: 7.50 x 10^{-4}
   smallest eigval: 9.26 x 10^{-9}, largest eigval: 3.56 x 10^{0}
