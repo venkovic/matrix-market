@@ -1,0 +1,66 @@
+Symmetric positive definite (SPD) matrices:
+- tri100eigs4k
+  size: 4,000 x 4,000, nnz: 11,998, density: 7.50 x 10^{-4}
+  smallest eigval: 9.26 x 10^{-9}, largest eigval: 3.56 x 10^{0}
+  spectral condition number: 3.85 x 10^{8}
+  description: custom-made tridiagonal matrix A=LL^T, where the 
+  lower bidiagonal matrix L has 100 distinct random eigenvalues 
+  (diagonal components) independently and identically distributed 
+  (iid) as uniform random variables (RVs) in (0.05,1.05). All 
+  other eigenvalues (diagonal components) of L are 1. The sub-diagonal 
+  components of L are iid uniform RVs in (0,1). A is nearly singular 
+  with a smallest eigenvalue of 10^{-8}.
+- triclust4k
+  size: 4,000 x 4,000, nnz: 11,998, density: 7.50 x 10^{-4}
+  smallest eigval: 1.00 x 10^{-9}, largest eigval: 1.00 x 10^{0}
+  spectral condition number: 1.00 x 10^{9}
+  description: custom-made tridiagonal matrix with 3,999 distinct 
+  eigenvalues evenly spaced by 1 x 10^{-9} between 1 x 10^{-6} and
+  3.999 x 10^{-6}. A last eigenvalue is set at 1.
+- triunif4k
+  size: 4,000 x 4,000, nnz: 11,998, density: 7.50 x 10^{-4}
+  smallest eigval: 1.00 x 10^{-9}, largest eigval: 1.00 x 10^{0}
+  spectral condition number: 1.00 x 10^{9}
+  description: custom-made tridiagonal matrix with 4,000 distinct
+  eigenvalues evenly spaced between 1 x 10^{-9} and 1.
+- 4bw100eigs20k
+  size: 20,000 x 20,000, nnz: 179,980, density: 4.50 x 10^{-4}
+  smallest eigval: 2.47 x 10^{-9}, largest eigval: 1.05 x 10^{0}
+  spectral condition number: 4.25 x 10^{8}
+  description: custom-made banded matrix A=LL^T, where the lower 
+  triangular matrix L has a dense bandwidth of 4. The factor L 
+  has 100 iid random distinct eigenvalues (diagonal components) 
+  uniformly distributed in (0,0.05). All the other eigenvalues of 
+  L are set to 1. Each sub-diagonal of L has uniform iid random 
+  components in (0,0.01). A is nearly singular with a smallest 
+  eigenvalue of 10^{-9}.
+- 4bw100eigs20k2
+  size: 20,000 x 20,000, nnz: 179,980, density: 4.50 x 10^{-4}
+  smallest eigval: 9.74 x 10^{-1}, largest eigval: 9.79 x 10^{9}
+  spectral condition number: 1.01 x 10^{10}
+  description: custom-made matrix A=LL^T similar to 4bw100eigs20k, 
+  but for which the random distinct eigenvalues of $L$ are in (0,10^5).
+  Unlike 4bw100eigs20k, 4bw100eigs20k2 is not nearly singular.  
+- rand20k
+  size: 20,000 x 20,000, nnz: 99,772, density: 2.49 x 10^{-4}
+  smallest eigval: 8.70 x 10^{-2}, largest eigval: 1.00 x 10^{8}
+  spectral condition number: 1.15 x 10^{9}
+  description: custom-made matrix A=LL^T with random off-diagonal 
+  non-zero pattern. The lower triangular factor L has iid random 
+  eigenvalues in (0,10^4), and all non-zero off-diagonal components 
+  are in (0,1).
+- rand20k2
+  size: 20,000 x 20,000, nnz: 99,772, density: 2.49 x 10^{-4}
+  smallest eigval: 8.67 x 10^{-6}, largest eigval: 1.00 x 10^{4}
+  spectral condition number: 1.15 x 10^{9}
+  description: custom-made matrix A=LL^T with the same non-zero 
+  pattern and off-diagonal values as rand20k. For rand20k2, the 
+  eigenvalues of L are in (0,10^2), rendering A nearly singular.
+- Poisson32k
+  size: 31,839 x 31,839, nnz: 221,375, density: 2.18 x 10^{-4}
+  smallest eigval: 6.21 x 10^{-4}, largest eigval: 9.66 x 10^{2}
+  spectral condition number: 1.55 x 10^{5}
+  description: stiffness matrix of a P1 finite element unstructured 
+  discretization of 2D Poisson PDE with random variable coefficient 
+  sampled as a Gaussian process with unit-variance squared exponential 
+  covariance.
